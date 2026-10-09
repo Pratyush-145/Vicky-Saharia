@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vicky Saharia — Singer • Composer • Writer</title>
+<link rel="icon" type="image/x-icon" href="gallery-10.ico">
+<meta name="description" content="Vicky Saharia — Independent Indian Music Artist, Singer, Composer and Writer. 26 songs released.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#070707;
+  --bg2:#101010;
+  --card:rgba(255,255,255,.055);
+  --line:rgba(255,255,255,.12);
+  --text:#f5f2ea;
+  --muted:#aaa49a;
+  --gold:#d7ad58;
+  --gold2:#f2d58e;
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(var(--max),calc(100% - 48px));margin:auto}
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:18px 0;background:linear-gradient(to bottom,rgba(0,0,0,.78),transparent);
+  transition:.35s;
+}
+header.scrolled{background:rgba(7,7,7,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Playfair Display";font-size:25px;font-weight:700;letter-spacing:-1px}
+.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:30px;font-size:13px;color:#d5d0c7}
+.navlinks a{position:relative}
+.navlinks a:after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;background:var(--gold);transition:.3s}
+.navlinks a:hover:after{width:100%}
+.menu{display:none;background:none;border:0;color:white;font-size:24px}
+
+.hero{
+  min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;
+  background:#080808;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.72) 35%,rgba(0,0,0,.15) 72%,rgba(0,0,0,.45) 100%),
+    linear-gradient(0deg,rgba(0,0,0,.72),transparent 50%,rgba(0,0,0,.25)),
+    url("assets/hero-bg.jpg");
+  background-size:cover;background-position:center;
+  transform:scale(1.04);animation:heroZoom 12s ease-out forwards;
+}
+.hero-fallback{
+  position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(circle at 72% 45%,#3a2a12 0,#17120b 27%,#080808 65%);
+}
+@keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero-content{position:relative;z-index:2;padding-top:75px;max-width:760px}
+.kicker{
+  color:var(--gold2);font-size:12px;letter-spacing:4px;text-transform:uppercase;
+  margin-bottom:22px;font-weight:600;
+}
+.hero h1{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(62px,9.2vw,142px);
+  line-height:.86;letter-spacing:-5px;font-weight:700;
+  max-width:850px;
+}
+.hero h1 span{
+  display:block;
+  background:linear-gradient(100deg,#fff 10%,#f0d08a 65%,#a77a2e);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-desc{margin-top:30px;color:#c8c2b7;max-width:580px;font-size:16px;line-height:1.8}
+.actions{display:flex;gap:13px;margin-top:32px;flex-wrap:wrap}
+.btn{
+  padding:14px 21px;border:1px solid rgba(255,255,255,.2);border-radius:999px;
+  font-size:13px;font-weight:600;transition:.3s;display:inline-flex;align-items:center;gap:9px;
+}
+.btn.primary{background:#f2eee4;color:#111;border-color:#f2eee4}
+.btn:hover{transform:translateY(-3px);border-color:var(--gold)}
+.hero-mark{
+  position:absolute;right:5vw;bottom:7vh;color:rgba(255,255,255,.12);
+  font-family:"Playfair Display";font-size:11px;letter-spacing:6px;writing-mode:vertical-rl;
+}
+
+section{padding:115px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
+.section-title{font:700 clamp(42px,6vw,75px)/.95 "Playfair Display";letter-spacing:-2px;margin-top:10px}
+.section-copy{max-width:450px;color:var(--muted);line-height:1.7;font-size:14px}
+
+.about{background:linear-gradient(180deg,#0a0a0a,#0e0c09)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.about-text p{color:#c0bbb2;line-height:1.9;font-size:16px;margin-top:24px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{
+  padding:28px 23px;border:1px solid var(--line);border-radius:20px;background:var(--card);
+  backdrop-filter:blur(15px);transition:.35s;position:relative;overflow:hidden;
+}
+.stat:before{content:"";position:absolute;inset:auto -30px -50px auto;width:100px;height:100px;border-radius:50%;background:rgba(215,173,88,.12);filter:blur(25px)}
+.stat:hover{transform:translateY(-6px);border-color:rgba(215,173,88,.45)}
+.stat b{display:block;font:700 clamp(27px,3vw,42px) "Playfair Display";color:#fff}
+.stat span{display:block;color:var(--muted);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-top:9px}
+
+.music{background:#080808}
+.spotify{
+  border:1px solid var(--line);border-radius:24px;padding:10px;background:#0e0e0e;margin-bottom:50px;
+}
+.spotify iframe{width:100%;height:152px;border:0;border-radius:16px}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.video{
+  position:relative;aspect-ratio:16/9;border-radius:17px;overflow:hidden;background:#151515;
+  border:1px solid var(--line);
+}
+.video iframe{width:100%;height:100%;border:0}
+.video-label{padding:13px 3px 4px;color:#cfc9be;font-size:13px}
+
+.gallery-grid{columns:3 280px;column-gap:16px}
+.gallery-grid img{
+  width:100%;margin:0 0 16px;border-radius:16px;border:1px solid var(--line);
+  cursor:pointer;transition:.45s;break-inside:avoid;
+}
+.gallery-grid img:hover{transform:scale(1.015);filter:brightness(1.08)}
+
+.social{
+  background:linear-gradient(135deg,#141008,#080808 55%);
+  text-align:center;
+}
+.social-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:35px}
+.social-links a{
+  border:1px solid var(--line);padding:14px 21px;border-radius:999px;color:#ddd;
+  transition:.3s;font-size:13px;
+}
+.social-links a:hover{border-color:var(--gold);color:var(--gold2);transform:translateY(-3px)}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact-card{padding:32px;border:1px solid var(--line);border-radius:22px;background:var(--card)}
+.contact-card p{color:var(--muted);line-height:1.8;margin:17px 0 25px}
+.contact-card input,.contact-card textarea{
+  width:100%;background:#090909;border:1px solid var(--line);border-radius:12px;
+  padding:14px;color:white;font:inherit;margin-bottom:12px;outline:none;
+}
+.contact-card textarea{height:130px;resize:vertical}
+.contact-card input:focus,.contact-card textarea:focus{border-color:var(--gold)}
+
+footer{padding:30px 0;border-top:1px solid var(--line);color:#777;font-size:12px;text-align:center}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+
+.lightbox{
+  position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:200;display:none;
+  align-items:center;justify-content:center;padding:30px;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1100px,95vw);max-height:90vh;object-fit:contain;border-radius:10px}
+.close{position:absolute;right:25px;top:18px;color:#fff;font-size:36px;cursor:pointer}
+
+
+/* --- Cinematic motion layer --- */
+.hero-orb{
+  position:absolute;width:340px;height:340px;border-radius:50%;
+  pointer-events:none;filter:blur(70px);opacity:.18;z-index:1;
+  background:var(--gold);
+  animation:orbFloat 9s ease-in-out infinite alternate;
+}
+.orb-one{right:8%;top:22%}
+.orb-two{left:34%;bottom:-12%;width:220px;height:220px;opacity:.09;animation-delay:-3s}
+@keyframes orbFloat{
+  0%{transform:translate3d(0,0,0) scale(1)}
+  50%{transform:translate3d(-35px,24px,0) scale(1.12)}
+  100%{transform:translate3d(28px,-28px,0) scale(.94)}
+}
+.hero-lines{
+  position:absolute;inset:-30%;z-index:1;pointer-events:none;opacity:.16;
+  background:repeating-linear-gradient(115deg,transparent 0 95px,rgba(215,173,88,.35) 96px,transparent 97px 190px);
+  transform:rotate(-8deg);
+  animation:linesMove 18s linear infinite;
+}
+@keyframes linesMove{to{transform:rotate(-8deg) translate3d(180px,0,0)}}
+.hero-particles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.particle{
+  position:absolute;width:3px;height:3px;border-radius:50%;background:rgba(242,213,142,.7);
+  box-shadow:0 0 12px rgba(242,213,142,.55);
+  animation:particleRise var(--duration) linear infinite;
+}
+@keyframes particleRise{
+  from{transform:translate3d(0,35vh,0);opacity:0}
+  15%{opacity:.8}
+  80%{opacity:.35}
+  to{transform:translate3d(var(--drift),-110vh,0);opacity:0}
+}
+.hero-content{animation:heroEnter 1.15s cubic-bezier(.2,.75,.2,1) both}
+@keyframes heroEnter{
+  from{opacity:0;transform:translateY(45px)}
+  to{opacity:1;transform:none}
+}
+.hero h1{animation:titleReveal 1.2s .15s cubic-bezier(.2,.8,.2,1) both}
+@keyframes titleReveal{
+  from{opacity:0;transform:translateY(35px) scale(.96);filter:blur(10px)}
+  to{opacity:1;transform:none;filter:blur(0)}
+}
+.btn{position:relative;overflow:hidden}
+.btn:before{
+  content:"";position:absolute;inset:0;transform:translateX(-110%);
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.3),transparent);
+  transition:transform .65s ease;
+}
+.btn:hover:before{transform:translateX(110%)}
+.stat b{transition:transform .35s ease,color .35s ease}
+.stat:hover b{transform:translateX(4px);color:var(--gold2)}
+.video{
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .5s;
+}
+.video:hover{
+  transform:translateY(-7px) scale(1.015);
+  border-color:rgba(215,173,88,.45);
+  box-shadow:0 20px 55px rgba(0,0,0,.35);
+}
+.gallery-grid img{will-change:transform}
+.section-title{position:relative}
+.section-title:after{
+  content:"";display:block;width:52px;height:2px;margin-top:18px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+  transform-origin:left;animation:lineGrow 1.2s ease both;
+}
+@keyframes lineGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.reveal{transition:opacity .9s ease,transform .9s cubic-bezier(.2,.75,.2,1)}
+@media (prefers-reduced-motion: reduce){
+  *,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}
+}
+
+@media(max-width:850px){
+  .navlinks{display:none}
+  .menu{display:block}
+  .navlinks.open{
+    display:flex;position:absolute;top:68px;left:20px;right:20px;padding:20px;
+    flex-direction:column;background:rgba(10,10,10,.96);border:1px solid var(--line);border-radius:16px;
+  }
+  .hero h1{font-size:clamp(58px,16vw,100px);letter-spacing:-3px}
+  .hero-bg{background-position:58% center}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}
+  .video-grid{grid-template-columns:1fr}
+  section{padding:85px 0}
+}
+@media(max-width:500px){
+  .container{width:min(var(--max),calc(100% - 30px))}
+  .hero-content{padding-top:65px}
+  .hero h1{font-size:58px}
+  .hero-desc{font-size:14px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat{padding:22px 16px}
+  .stat b{font-size:26px}
+}
+</style>
+
+<style>
+/* === CRAZY CINEMATIC MOTION === */
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.06;background:radial-gradient(circle at 20% 20%,#fff 0 1px,transparent 1.5px);background-size:24px 24px;animation:grainMove .35s steps(2) infinite}
+@keyframes grainMove{0%{transform:translate(0,0)}25%{transform:translate(-2%,1%)}50%{transform:translate(1%,-2%)}75%{transform:translate(2%,2%)}100%{transform:translate(-1%,-1%)}}
+
+.hero{isolation:isolate}
+.hero-bg img{transform:scale(1.08);animation:heroZoom 14s ease-in-out infinite alternate}
+.hero-overlay{background:linear-gradient(90deg,rgba(3,3,3,.92) 0%,rgba(3,3,3,.62) 45%,rgba(3,3,3,.18) 100%),linear-gradient(0deg,rgba(3,3,3,.78),transparent 45%)}
+@keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1.17)}}
+
+.hero::after{content:"";position:absolute;inset:-20%;z-index:1;pointer-events:none;background:conic-gradient(from 180deg at 50% 50%,transparent 0 30%,rgba(214,168,73,.12) 38%,transparent 48% 70%,rgba(255,255,255,.05) 78%,transparent 88%);animation:radar 10s linear infinite}
+@keyframes radar{to{transform:rotate(360deg)}}
+
+.hero-content{animation:heroEnter 1.2s cubic-bezier(.16,1,.3,1) both}
+@keyframes heroEnter{from{opacity:0;transform:translateY(45px) scale(.96);filter:blur(12px)}to{opacity:1;transform:none;filter:none}}
+.hero .display{letter-spacing:-.045em;text-shadow:0 0 40px rgba(214,168,73,.18);animation:titleBreath 5s ease-in-out infinite}
+@keyframes titleBreath{50%{text-shadow:0 0 75px rgba(214,168,73,.28)}}
+.eyebrow{letter-spacing:.34em;animation:tracking 2s ease-out both}
+@keyframes tracking{from{letter-spacing:.8em;opacity:0}to{opacity:1}}
+
+.btn{position:relative;overflow:hidden;transform:translateZ(0);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.btn::after{content:"";position:absolute;top:-80%;left:-120%;width:70%;height:260%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:rotate(18deg);transition:left .7s}
+.btn:hover{transform:translateY(-5px) scale(1.03);box-shadow:0 18px 50px rgba(214,168,73,.22)}
+.btn:hover::after{left:150%}
+
+.section{position:relative}
+.section::before{content:"";position:absolute;left:50%;top:0;width:1px;height:80px;background:linear-gradient(transparent,rgba(214,168,73,.5),transparent);opacity:.6}
+
+.glass-card{transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .5s,box-shadow .5s,background .5s}
+.glass-card:hover{transform:translateY(-9px);border-color:rgba(214,168,73,.45);box-shadow:0 25px 70px rgba(0,0,0,.35),0 0 35px rgba(214,168,73,.08)}
+.stat{position:relative;overflow:hidden}
+.stat::before{content:"";position:absolute;width:120px;height:120px;right:-55px;top:-55px;border-radius:50%;background:rgba(214,168,73,.08);transition:transform .6s}
+.stat:hover::before{transform:scale(2.4)}
+.stat-value{transition:transform .45s}
+.stat:hover .stat-value{transform:scale(1.08)}
+
+.video-card .thumb{overflow:hidden}
+.video-card img{transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .6s}
+.video-card:hover img{transform:scale(1.1);filter:saturate(1.15) contrast(1.06)}
+.video-card .overlay{transition:transform .45s,opacity .45s}
+.video-card:hover .overlay{transform:scale(1.2) rotate(4deg);opacity:1}
+
+.masonry img{transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .5s,box-shadow .5s}
+.masonry img:hover{transform:scale(1.035) rotate(-.4deg);filter:saturate(1.15);box-shadow:0 25px 70px rgba(0,0,0,.45);z-index:3}
+
+.spotify-showcase{position:relative;display:flex;align-items:center;justify-content:space-between;gap:30px;min-height:300px;margin-bottom:24px;padding:42px;overflow:hidden;border:1px solid rgba(214,168,73,.28);border-radius:28px;background:linear-gradient(115deg,rgba(214,168,73,.11),rgba(255,255,255,.025) 48%,rgba(0,0,0,.15));box-shadow:0 30px 90px rgba(0,0,0,.3),inset 0 1px rgba(255,255,255,.08)}
+.spotify-showcase::before{content:"";position:absolute;inset:1px;border-radius:27px;background:linear-gradient(115deg,transparent 20%,rgba(255,255,255,.055),transparent 60%);transform:translateX(-100%);animation:spotifySweep 5s ease-in-out infinite}
+@keyframes spotifySweep{55%,100%{transform:translateX(100%)}}
+.spotify-glow{position:absolute;width:300px;height:300px;right:22%;top:-100px;border-radius:50%;background:rgba(214,168,73,.16);filter:blur(60px);animation:glowFloat 5s ease-in-out infinite alternate}
+@keyframes glowFloat{to{transform:translate(40px,45px) scale(1.2);opacity:.65}}
+.spotify-copy{position:relative;z-index:2;max-width:620px}
+.spotify-kicker{font-size:.72rem;letter-spacing:.28em;color:#d6a849;font-weight:800}
+.spotify-copy h3{font-family:Georgia,serif;font-size:clamp(2.2rem,5vw,4.5rem);margin:.4rem 0;line-height:.95}
+.spotify-copy p{color:var(--muted);max-width:560px;font-size:1rem;line-height:1.8}
+.spotify-btn{display:inline-flex;align-items:center;gap:12px;margin-top:18px;padding:13px 18px;border:1px solid rgba(214,168,73,.5);border-radius:999px;color:inherit;text-decoration:none;background:rgba(255,255,255,.05);transition:.35s}
+.spotify-btn:hover{transform:translateY(-4px);background:rgba(214,168,73,.13);box-shadow:0 15px 45px rgba(214,168,73,.16)}
+.spotify-play{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#d6a849;color:#111;font-size:.72rem}
+.spotify-arrow{opacity:.6;margin-left:8px}
+.spotify-visual{position:relative;width:260px;height:220px;flex:none;display:grid;place-items:center}
+.vinyl{width:190px;height:190px;border-radius:50%;background:repeating-radial-gradient(circle,#090909 0 3px,#171717 4px 6px);box-shadow:0 0 0 12px rgba(214,168,73,.06),0 25px 65px rgba(0,0,0,.55);animation:spinVinyl 7s linear infinite}
+.vinyl::after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:conic-gradient(transparent,rgba(255,255,255,.15),transparent 18%,rgba(214,168,73,.2),transparent 40%);animation:spinVinyl 3s linear infinite}
+.vinyl-hole{position:absolute;width:28px;height:28px;border-radius:50%;background:#d6a849;border:7px solid #161616;z-index:2}
+@keyframes spinVinyl{to{transform:rotate(360deg)}}
+.eq{position:absolute;bottom:12px;right:0;display:flex;gap:5px;align-items:end;height:55px}
+.eq i{display:block;width:5px;border-radius:8px;background:#d6a849;animation:eq 1s ease-in-out infinite alternate}
+.eq i:nth-child(1){height:20px}.eq i:nth-child(2){height:38px;animation-delay:.12s}.eq i:nth-child(3){height:52px;animation-delay:.22s}.eq i:nth-child(4){height:28px;animation-delay:.3s}.eq i:nth-child(5){height:45px;animation-delay:.16s}.eq i:nth-child(6){height:25px;animation-delay:.36s}.eq i:nth-child(7){height:40px;animation-delay:.08s}
+@keyframes eq{to{transform:scaleY(.35)}}
+
+.fade-in{transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1),filter .9s}
+.fade-in:not(.visible){opacity:0;transform:translateY(35px) scale(.98);filter:blur(5px)}
+.fade-in.visible{opacity:1;transform:none;filter:none}
+
+@media(max-width:800px){
+  .spotify-showcase{padding:30px 24px;min-height:0}
+  .spotify-visual{width:150px;height:160px}
+  .vinyl{width:125px;height:125px}
+  .vinyl::after{width:125px;height:125px}
+}
+@media(max-width:600px){
+  .spotify-showcase{display:block}
+  .spotify-visual{margin:15px auto 0}
+  .spotify-copy{text-align:center}
+  .spotify-btn{justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+}
+</style>
+
+</head>
+
+<body>
+<header id="header">
+  <div class="container nav">
+    <a class="logo" href="#home">Vicky <span>Saharia</span></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#music">Music</a>
+      <a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu" id="menu">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-fallback"></div>
+  <div class="hero-orb orb-one"></div>
+  <div class="hero-orb orb-two"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-bg"></div>
+  <div class="container hero-content reveal">
+    <div class="kicker">Singer • Composer • Writer</div>
+    <h1>Vicky <span>Saharia</span></h1>
+    <p class="hero-desc">26 songs released. One powerful voice. A journey shaped by original music, live performances and independent artistry.</p>
+    <div class="actions">
+      <a class="btn primary" href="#music">▶ Explore Music</a>
+      <a class="btn" href="#contact">Get in Touch ↗</a>
+    </div>
+  </div>
+  <div class="hero-mark">INDEPENDENT ARTIST</div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-text reveal">
+      <div class="eyebrow">The Artist</div>
+      <h2 class="section-title">Music with a<br>personal signature.</h2>
+      <p>Vicky Saharia is an independent Indian music artist, singer, composer and writer. With original songs and a distinctive stage presence, his work brings together personal expression and contemporary Indian music.</p>
+      <p>From studio recordings to live concerts, every release is part of an evolving artistic journey.</p>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><b>26</b><span>Songs Released</span></div>
+      <div class="stat"><b>8 Nov 1992</b><span>Date of Birth</span></div>
+      <div class="stat"><b>5'7"</b><span>Height</span></div>
+      <div class="stat"><b>Unmarried</b><span>Marital Status</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="music" id="music">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Listen & Watch</div><h2 class="section-title">Music.</h2></div>
+      <p class="section-copy">Explore released music, music videos and live concert performances.</p>
+    </div>
+    <div class="spotify reveal">
+<div class="glass-card spotify-wrap fade-in visible">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/2gWWgh171277ZTKb2V5Fog?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    </div>
+    <div class="video-grid" id="musicVideos"></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-head reveal show">
+      <div><div class="eyebrow">Moments</div><h2 class="section-title">Gallery.</h2></div>
+      <p class="section-copy">Selected moments from performances, music and the artist's journey.</p>
+    </div>
+    <div class="gallery-grid reveal show" id="galleryGrid">
+      <img src="assets/gallery-1.jpeg" alt="Vicky Saharia gallery image 1" loading="lazy">
+      <img src="assets/gallery-2.jpeg" alt="Vicky Saharia gallery image 2" loading="lazy">
+      <img src="assets/gallery-3.jpeg" alt="Vicky Saharia gallery image 3" loading="lazy">
+      <img src="assets/gallery-4.jpeg" alt="Vicky Saharia gallery image 4" loading="lazy">
+      <img src="assets/gallery-5.jpeg" alt="Vicky Saharia gallery image 5" loading="lazy">
+      <img src="assets/gallery-6.jpeg" alt="Vicky Saharia gallery image 6" loading="lazy">
+      <img src="assets/gallery-7.jpeg" alt="Vicky Saharia gallery image 7" loading="lazy">
+      <img src="assets/gallery-8.jpeg" alt="Vicky Saharia gallery image 8" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="social">
+  <div class="container reveal">
+    <div class="eyebrow">Connect</div>
+    <h2 class="section-title">Follow the journey.</h2>
+    <div class="social-links">
+      <a href="https://www.instagram.com/vickysaharia03" target="_blank">Instagram ↗</a>
+      <a href="https://open.spotify.com/" target="_blank">Spotify ↗</a>
+      <a href="https://youtube.com/@vickysaharia" target="_blank">YouTube ↗</a>
+      <a href="https://www.facebook.com/" target="_blank">Facebook ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">Contact</div>
+      <h2 class="section-title">Let's create<br>something.</h2>
+      <p class="section-copy" style="margin-top:25px">For collaborations, performances, music enquiries or general messages.</p>
+    </div>
+    <div class="contact-card reveal">
+      <p>Email directly at <a href="mailto:vickysaharia11@gmail.com" style="color:var(--gold2)">vickysaharia11@gmail.com</a></p>
+     <form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="9c564091-cfdc-4c51-adac-0154a1e85518">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button class="btn primary" type="submit">Send Message ↗</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> Vicky Saharia. All rights reserved.</footer>
+
+<div class="lightbox" id="lightbox"><button class="close" id="close">×</button><img id="lightboxImg" alt=""></div>
+
+<script>
+const musicVideos=[
+["Dilli Wali","6-JWqbW3LEM"],["Nasseb","3Yd2uL001nU"],["Jind Tere Naam","tJXR-n4AzRY"],
+["Dil Sunle","zlqu-5ETg5k"],["Khwaab","gDNGB8_C14o"],["Dil Ke Pass","cGORXEVUy9w"],
+["Rooh","tPfxaw63vaM"],["Japo Ram Naam","aI762ipwM58"],["Assman","YqtOyqgMI3o"],
+["Gunaah","M_MXheC7DvQ"],["One Side Love","7PlFolBHEF0"],["Tension Free","TUwxPjHhIsc"],
+["Black Suit","FydqrC4Jz90"]
+];
+
+const liveConcerts=["MzgemyOPxLk","8dLnDwABrJI","2F7-B-hVwXk","ryw2EM1BicE","4IjWO6QRceE","Z8SCuPUS7Eg"];
+
+const musicContainer=document.getElementById("musicVideos");
+musicVideos.forEach(([name,id])=>{
+  const wrap=document.createElement("div");
+  wrap.innerHTML=`<div class="video"><iframe src="https://www.youtube.com/embed/${id}" title="${name}" loading="lazy" allowfullscreen></iframe></div><div class="video-label">${name}</div>`;
+  musicContainer.appendChild(wrap);
+});
+
+const gallery=document.getElementById("galleryGrid");
+for(let i=1;i<=10;i++){
+  const img=document.createElement("img");
+  img.src=`assets/gallery-${i}.jpeg`;
+  img.alt=`Vicky Saharia gallery image ${i}`;
+  img.loading="lazy";
+  img.onerror=function(){this.style.display="none"};
+  img.onclick=()=>{
+    document.getElementById("lightboxImg").src=this.src;
+    document.getElementById("lightbox").classList.add("open");
+  };
+  gallery.appendChild(img);
+}
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+const header=document.getElementById("header");
+window.addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>30));
+
+const menu=document.getElementById("menu");
+const nav=document.getElementById("navlinks");
+menu.onclick=()=>nav.classList.toggle("open");
+nav.querySelectorAll("a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")});
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+document.getElementById("close").onclick=()=>document.getElementById("lightbox").classList.remove("open");
+document.getElementById("lightbox").onclick=e=>{
+  if(e.target.id==="lightbox")e.currentTarget.classList.remove("open");
+};
+
+const particleField=document.getElementById("particles");
+if(particleField && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+  for(let i=0;i<34;i++){
+    const p=document.createElement("span");
+    p.className="particle";
+    p.style.left=(Math.random()*100)+"%";
+    p.style.bottom=(-10-Math.random()*35)+"%";
+    p.style.setProperty("--duration",(7+Math.random()*9)+"s");
+    p.style.setProperty("--drift",(-70+Math.random()*140)+"px");
+    p.style.animationDelay=(-Math.random()*12)+"s";
+    p.style.transform=`scale(${.5+Math.random()*1.4})`;
+    particleField.appendChild(p);
+  }
+}
+
+</script>
+</body>
+</html>
